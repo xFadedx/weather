@@ -6,7 +6,7 @@ body {
     height: 100vh;
     margin: 0;
     background-color: #fff386;
-    background: url('Weather-Images/clean3.gif') no-repeat;
+    background: url('clean3.gif') no-repeat;
     background-position: center;
     background-size: cover;
     backdrop-filter: blur(15px);
