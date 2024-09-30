@@ -1,0 +1,238 @@
+/* Styles for the body element */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #fff386;
+    background: url('Weather\ Images/clean3.gif') no-repeat;
+    background-position: center;
+    background-size: cover;
+    backdrop-filter: blur(15px);
+    font-family: 'Courier New', Courier, monospace, sans-serif;
+  }
+  
+  /* Styles for the container element */
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 75px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    backdrop-filter: blur(px);
+    animation: fade-up 0.3s linear;
+    transition: border-width 0.3s ease-in-out;
+  }
+  
+  h2 {
+    text-align: center;
+    animation: colorCycle 8s linear infinite, fade-up 0.3s linear;
+    text-shadow: 0 0 20px, 0 0 30px;
+    transform-style: preserve-3d;
+    transform: translateZ(200px);
+    font-size: 32px;
+    
+  }
+  
+  /* Styles for the label element */
+  label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  /* Styles for the input[type="text"] element */
+  input[type="text"] {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 5px;
+    margin-right: 10px;
+    font-family: 'Courier New', Courier, monospace, sans-serif;
+  }
+  
+  /* Styles for the city/getweather element */
+  button {
+    border: 2px solid white;
+    background-color: rgba(255, 255, 255, 0.205);
+    color: white;
+    padding: 0px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    font-family: 'Courier New', Courier, monospace, sans-serif;
+    text-transform: uppercase;
+    transform: perspective(200px) rotateY(-20deg);
+  }
+  
+  /* Styles for the #getWeatherBtn element */
+  #getWeatherBtn {
+    padding: 10px;
+    
+    box-shadow: 6px -3px 5px rgba(255, 255, 255, 0.5);
+  }
+  
+  /* Styles for the button element when hovered */
+  button:hover {
+    background-color: white;
+    color: black;
+    
+  }
+  
+  /* Styles for the #weather element */
+  #weather {
+    margin-top: 20px;
+    font-size: 24px;
+    font-weight: bold;
+    border-radius: 50px;
+  }
+  
+  /* Styles for the #city input element */
+  #city {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    margin-right: 15px;
+    background-color: rgba(255, 255, 255, 0.205);
+    transform: perspective(300px) rotateY(20deg);
+    box-shadow: -6px -3px 5px rgba(255, 255, 255, 0.5);
+    color: white;
+    text-rendering:geometricPrecision
+  }
+  
+  #city:hover {
+    background-color: white;
+    color: black;
+  }
+  
+  #city:hover::placeholder {
+    color: black;
+  }
+  
+  #city::placeholder {
+    color: white;
+  }
+  
+  /* Styles for the search-box class */
+  .search-box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  /* Styles for input[type="text"] elements */
+  input[type="text"] {
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px 0 0 5px;
+  }
+  
+  /* Styles for the weather-info class */
+  .weather-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+  }
+  
+  /* Styles for the #location, #temperature, and #description elements */
+  #location,
+  #temperature,
+  #description {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  /* Styles for the #weather element */
+  #weather {
+    animation: colorCycle 8s linear infinite, fade-up 0.3s linear;
+    text-shadow: 0 0 20px, 0 0 30px;
+  }
+  
+  /* Styles for the #city element when it's empty followed by the #weather element */
+  #city:empty + #weather {
+    display: none;
+  }
+  
+  /* Styles for the .container element when expanded */
+  .container.expand {
+    animation: expandAnimation 0.3s forwards;
+  }
+  
+  
+  
+  a {
+              color: inherit;
+              text-decoration: none;
+          }
+  
+  /* Keyframes for the expandAnimation */
+  @keyframes expandAnimation {
+    from {
+      height: 0;
+    }
+    to {
+      height: 70%;
+    }
+  }
+  
+  /* Keyframes for the colorCycle animation */
+  @keyframes colorCycle {
+    0% {
+      color: rgb(255, 0, 0);
+    }
+    16.67% {
+      color: rgb(255, 255, 0);
+    }
+    33.33% {
+      color: yellow;
+    }
+    33.33% {
+      color: rgb(0, 255, 0);
+    }
+    66.67% {
+      color: rgb(0, 255, 255);
+    }
+    83.33% {
+      color: rgb(112, 9, 185);
+    }
+    100% {
+      color: rgb(255, 0, 255);
+    }
+  }
+  
+  /* Keyframes for the borderCycle animation */
+  @keyframes borderCycle {
+    0% {
+      border: 4px solid rgb(255, 0, 0);
+    }
+    16.67% {
+      border: 4px solid rgb(255, 255, 0);
+    }
+    33.33% {
+      border: 4px solid rgb(0, 255, 0);
+    }
+    66.67% {
+      border: 4px solid rgb(0, 255, 255);
+    }
+    83.33% {
+      border: 4px solid indigo;
+    }
+    100% {
+      border: 4px solid rgb(255, 0, 255);
+    }
+  }
+
+  

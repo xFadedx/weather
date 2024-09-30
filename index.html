@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Weather App</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Weather Checker</h2>
+        <div class="search-box">
+            <input type="text" placeholder="Enter Location Name" id="city" name="city"> 
+            <button id="getWeatherBtn" onclick="getWeather()">Get Weather</button>
+        </div>
+        <div id="weather" class="weather-info"></div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="weather.js"></script>
+    <script>
+        $("#city").keypress(function (event) {
+            if (event.keyCode === 13) {
+                $("#getWeatherBtn").click();
+            }
+        });
+    </script>
+</body>
+</html>
